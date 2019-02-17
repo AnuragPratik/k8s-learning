@@ -1,0 +1,7 @@
+apiVersion: v1
+kind: ConfigMap
+metadata:
+  name: example
+data: 
+  common.log_level: info
+  common.stage: staging

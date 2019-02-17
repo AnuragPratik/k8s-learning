@@ -1,6 +1,6 @@
 kind: Namespace
 apiVersion: v1
 metadata:
-  name: lesson201
+  name: k8s-ap
   labels:
-    name: lesson201
+    name: k8s-ap
