@@ -19,7 +19,7 @@
 * @FOR /f "tokens=*" %i IN ('minikube docker-env') DO @%i
 * docker ps
 
-## docker for widows with kubernets ,setting up dashboard
+## docker for widows with kubernetes, setting up dashboard
 
 https://github.com/kubernetes/dashboard
 https://github.com/kubernetes-retired/heapster/
