@@ -10,7 +10,8 @@ set shiftround					"When shifting lines, round the indentation to the nearest mu
 set shiftwidth=2				"when indenting with '>', use 2 spaces width
 set autoindent					"New lines inherit the indentation of previous lines.
 set smartindent					"Enables smart indent
-inoremap <S-Tab> <C-d>			"Enables Shift+Tab
+"Enables Shift+Tab
+inoremap <S-Tab> <C-d>
 
 "Search Options
 set hlsearch					"Enable search highlighting.
