@@ -8,6 +8,8 @@
 
 ```cmd
 * set environment variable MINIKUBE_HOME=C:\Users\Anurag\
+* minikube config set memory 4096
+* minikube config set cpus 2
 * minikube start --vm-driver hyperv --hyperv-virtual-switch "Default Switch"
 * kubectl cluster-info
 * kubectl run hello-minikube --image=k8s.gcr.io/echoserver:1.10 --port=8080
