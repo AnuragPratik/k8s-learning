@@ -1,6 +1,6 @@
 apiVersion: extensions/v1beta1
 kind: Deployment
-metadata: 
+metadata:
   name: example-data-tier
 spec:
   replicas: 1
@@ -15,7 +15,7 @@ spec:
         - name: redis
           image: "redis:latest"
           imagePullPolicy: IfNotPresent
-          ports: 
+          ports:
             - containerPort: 6379
               protocol: TCP
           livenessProbe:

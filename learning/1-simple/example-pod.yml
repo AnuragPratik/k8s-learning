@@ -9,7 +9,7 @@ spec:
     - name: redis
       image: "redis:latest"
       imagePullPolicy: IfNotPresent
-      ports: 
+      ports:
         - containerPort: 6379
           protocol: TCP
 
@@ -21,7 +21,7 @@ spec:
       env:
         - name: "REDIS_URL"
           value: "redis://localhost:6379"
-          
+
     - name: counter
       image: "slashdeploy/microservice-example:counter-v1"
       env:

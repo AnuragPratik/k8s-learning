@@ -10,6 +10,6 @@ spec:
     - name: redis
       image: "redis:latest"
       imagePullPolicy: IfNotPresent
-      ports: 
+      ports:
         - containerPort: 6379
           protocol: TCP

@@ -1,6 +1,6 @@
 apiVersion: extensions/v1beta1
 kind: Deployment
-metadata: 
+metadata:
   name: example-app-tier
 spec:
   replicas: 1
@@ -12,18 +12,18 @@ spec:
         tier: app
       annotations:
         pod.beta.kubernetes.io/init-containers: '[{
-            "name": "await-redis",
-            "image": "slashdeploy/microservice-example:server-v1",
-            "imagePullPolicy": "IfNotPresent",
-            "env": [{
-              "name": "REDIS_URL",
-              "value": "redis://$(EXAMPLE_DATA_TIER_SERVICE_HOST):$(EXAMPLE_DATA_TIER_SERVICE_PORT_REDIS)"
-            }],
-            "command": [ 
-              "npm", 
-              "run-script", 
-              "await-redis" 
-              ]
+          "name": "await-redis",
+          "image": "slashdeploy/microservice-example:server-v1",
+          "imagePullPolicy": "IfNotPresent",
+          "env": [{
+          "name": "REDIS_URL",
+          "value": "redis://$(EXAMPLE_DATA_TIER_SERVICE_HOST):$(EXAMPLE_DATA_TIER_SERVICE_PORT_REDIS)"
+          }],
+          "command": [
+          "npm",
+          "run-script",
+          "await-redis"
+          ]
           }]'
     spec:
       containers:
