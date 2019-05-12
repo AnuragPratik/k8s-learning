@@ -15,7 +15,7 @@ spec:
         appdb: rsvpdb
     spec:
       containers:
-      - name: rsvp-db
-        image: mongo:3.3
-        ports:
-        - containerPort: 27017
+        - name: rsvp-db
+          image: mongo:3.3
+          ports:
+            - containerPort: 27017
