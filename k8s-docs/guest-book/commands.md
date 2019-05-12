@@ -2,7 +2,7 @@
 
 ## Setting Up
 
-```
+```cmd
 kubectl apply -f redis-master-deployment.yaml
 kubectl get pods
 kubectl logs -f POD-NAME
@@ -26,11 +26,10 @@ kubectl get pods
 
 ## Cleaning Up
 
-```
+```cmd
 kubectl delete deployment -l app=redis
 kubectl delete service -l app=redis
 kubectl delete deployment -l app=guestbook
 kubectl delete service -l app=guestbook
-
 kubectl get pods
 ```
