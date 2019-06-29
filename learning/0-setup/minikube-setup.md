@@ -4,8 +4,8 @@
 rename kubectl in docker directory to kubectl.exe.bak (C:\Program Files\Docker\Docker\resources\bin\kubectl.exe)
 remove kubernetes cluster from docker for windows setting
 exit docker
-kubectl - <https://storage.googleapis.com/kubernetes-release/release/v1.14.2/bin/windows/amd64/kubectl.exe> - <https://storage.googleapis.com/kubernetes-release/release/stable.txt>
-minikube - <https://storage.googleapis.com/minikube/releases/v1.1.0/minikube-windows-amd64.exe> - <https://github.com/kubernetes/minikube/releases>
+kubectl - <https://storage.googleapis.com/kubernetes-release/release/v1.15.0/bin/windows/amd64/kubectl.exe> - <https://storage.googleapis.com/kubernetes-release/release/stable.txt>
+minikube - <https://storage.googleapis.com/minikube/releases/v1.1.2/minikube-windows-amd64.exe> - <https://github.com/kubernetes/minikube/releases>
 set environment variable MINIKUBE_HOME=C:\Users\Anurag\
 minikube config set memory 4096
 minikube config set cpus 2

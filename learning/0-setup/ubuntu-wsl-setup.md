@@ -4,7 +4,7 @@
 
 ```cmd
 curl -s https://storage.googleapis.com/kubernetes-release/release/stable.txt
-curl -LO https://storage.googleapis.com/kubernetes-release/release/v1.14.2/bin/linux/amd64/kubectl
+curl -LO https://storage.googleapis.com/kubernetes-release/release/v1.15.0/bin/linux/amd64/kubectl
 chmod +x ./kubectl
 sudo mv ./kubectl /usr/local/bin/kubectl
 kubectl version
@@ -43,7 +43,6 @@ sudo usermod -aG docker $USER
 echo "export DOCKER_TLS_VERIFY=1" >> ~/.bashrc
 echo "export DOCKER_HOST=tcp://192.168.5.60:2376" >> ~/.bashrc
 echo "export DOCKER_CERT_PATH=/mnt/c/Users/Anurag/.minikube/certs" >> ~/.bashrc
-echo "export DOCKER_API_VERSION=1.35" >> ~/.bashrc
 source ~/.bashrc
 ```
 
@@ -59,6 +58,5 @@ echo "if [ $commands[kubectl] ]; then source <(kubectl completion zsh); fi" >> ~
 echo "export DOCKER_TLS_VERIFY=1" >> ~/.zshrc
 echo "export DOCKER_HOST=tcp://192.168.5.60:2376" >> ~/.zshrc
 echo "export DOCKER_CERT_PATH=/mnt/c/Users/Anurag/.minikube/certs" >> ~/.zshrc
-echo "export DOCKER_API_VERSION=1.35" >> ~/.zshrc
 source ~/.zshrc
 ```
