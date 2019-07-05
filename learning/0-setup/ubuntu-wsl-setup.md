@@ -9,17 +9,19 @@ chmod +x ./kubectl
 sudo mv ./kubectl /usr/local/bin/kubectl
 kubectl version
 minikube ip
-kubectl config set-cluster minikube --server=https://192.168.5.60:8443 --certificate-authority=/mnt/c/Users/Anurag/.minikube/ca.crt
+kubectl config set-cluster minikube --server=https://172.25.188.173:8443 --certificate-authority=/mnt/c/Users/Anurag/.minikube/ca.crt
 kubectl config set-credentials minikube --client-certificate=/mnt/c/Users/Anurag/.minikube/client.crt --client-key=/mnt/c/Users/Anurag/.minikube/client.key
 kubectl config set-context minikube --cluster=minikube --user=minikube
 kubectl config use-context minikube
 ```
 
-## setting up kubectl autocomplete
+## setting up kubectl autocomplete and k alias
 
 ```cmd
 source <(kubectl completion bash)
-echo "source <(kubectl completion bash)" >> ~/.bashrc
+echo "if [ $commands[kubectl] ]; then source <(kubectl completion bash); fi" >> ~/.bashrc
+echo "alias k=kubectl" >> ~/.bashrc
+echo "complete -F __start_kubectl k" >> ~/.bashrc
 ```
 
 ## setting up docker
@@ -41,7 +43,7 @@ sudo apt-get update -y
 sudo apt-get install -y docker-ce
 sudo usermod -aG docker $USER
 echo "export DOCKER_TLS_VERIFY=1" >> ~/.bashrc
-echo "export DOCKER_HOST=tcp://192.168.5.60:2376" >> ~/.bashrc
+echo "export DOCKER_HOST=tcp://172.25.188.173:2376" >> ~/.bashrc
 echo "export DOCKER_CERT_PATH=/mnt/c/Users/Anurag/.minikube/certs" >> ~/.bashrc
 source ~/.bashrc
 ```
@@ -56,7 +58,7 @@ source <(kubectl completion zsh)  # setup autocomplete in zsh into the current s
 echo "if [ $commands[kubectl] ]; then source <(kubectl completion zsh); fi" >> ~/.zshrc # add autocomplete permanently to your zsh shell
 
 echo "export DOCKER_TLS_VERIFY=1" >> ~/.zshrc
-echo "export DOCKER_HOST=tcp://192.168.5.60:2376" >> ~/.zshrc
+echo "export DOCKER_HOST=tcp://172.25.188.173:2376" >> ~/.zshrc
 echo "export DOCKER_CERT_PATH=/mnt/c/Users/Anurag/.minikube/certs" >> ~/.zshrc
 source ~/.zshrc
 ```
